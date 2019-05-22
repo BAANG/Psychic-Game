@@ -4,11 +4,16 @@ var guessMade = [];
 var alphabet = "abcdefghijklmnopqrstuvwxyz" // String to be utilized as array for alphabet selection and character validation
 
 
+
 document.onkeyup = function(input) {
 
     var userHistory = document.getElementById("userGuess");
 
     var userKey = input.key.toLowerCase() // Changes key input to lowercase for consistency
+
+    var cpuRandom = alphabet[Math.floor(Math.random()*alphabet.length)]
+
+    console.log("This is the random letter: " + cpuRandom) // Console check for random letter generator
 
     
     if (alphabet.includes(userKey)) { // Checks if key press exists within alphabet
