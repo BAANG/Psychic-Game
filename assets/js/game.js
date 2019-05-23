@@ -16,20 +16,22 @@ document.onkeyup = function(input) { //function occurs on any key up
     var userKey = input.key.toLowerCase(); // Changes key input to lowercase for consistency
 
     console.log("This is the random letter: " + cpuRandom) // Console check for random letter generator
+    console.log("Guesses left: " + numGuess)
 
     reset = function(){
         guessMade = [];
         cpuRandom = alphabet[Math.floor(Math.random()*alphabet.length)];
+        numGuess = 10;
     }
 
     
     if (alphabet.includes(userKey)) { // Checks if key press exists within alphabet
         
-        console.log(userKey);
+        console.log(userKey); //console check what user presses
 
         guessMade.push(userKey); //pushes guesses into guessMade array
 
-        console.log(guessMade);
+        console.log(guessMade); //console check guessMade array
 
         keyHistory.textContent = guessMade;
 
@@ -37,12 +39,12 @@ document.onkeyup = function(input) { //function occurs on any key up
             alert("You guessed the letter correctly!");
             wins++;
             userWins.textContent = wins;
-    
             reset();
-        } else {
+
+        } else { //guess counter goes down if incorrect guess
             numGuess--;
             userGuess.textcontent = numGuess;
-            if (numGuess < 1) {
+            if (numGuess === 0) { //after numGuess--, if numGuess=0, increase loss counter
                 losses++;
                 userLosses.textContent = losses;
                 reset();
