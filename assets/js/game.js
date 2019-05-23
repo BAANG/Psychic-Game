@@ -25,7 +25,8 @@ document.onkeyup = function(input) { //function occurs on any key up
         guessMade = [];
         cpuRandom = alphabet[Math.floor(Math.random()*alphabet.length)];
         numGuess = 10;
-        document.getElementById("numGuess").innerHTML = numGuess;
+        document.getElementById("numGuess").innerHTML = numGuess
+        keyHistory.textContent = guessMade;
     }
 
     if (guessMade.includes(userKey) === false) { // Checks that userKey does NOT exist within guessMade array already
@@ -39,7 +40,7 @@ document.onkeyup = function(input) { //function occurs on any key up
 
             console.log(guessMade); //console check guessMade array
 
-            keyHistory.textContent = guessMade;
+            keyHistory.textContent = guessMade; //prints guessMade array to page
 
             if (cpuRandom === userKey) { //works on correct guess
                 alert("You guessed the letter correctly!");
