@@ -22,10 +22,10 @@ document.onkeyup = function(input) { //function occurs on any key up
 
 
     reset = function(){ //resets game back to starting position with new random letter
-        guessMade = [];
-        cpuRandom = alphabet[Math.floor(Math.random()*alphabet.length)];
-        numGuess = 10;
-        document.getElementById("numGuess").innerHTML = numGuess
+        guessMade = []; //empties current guessMade array
+        cpuRandom = alphabet[Math.floor(Math.random()*alphabet.length)]; //generates random letter of alphabet
+        numGuess = 10; //sets number of guesses to 10
+        document.getElementById("numGuess").innerHTML = numGuess //prints number of guesses to page
         keyHistory.textContent = guessMade;
     }
 
@@ -62,14 +62,7 @@ document.onkeyup = function(input) { //function occurs on any key up
         } else { // if key press doesn't exist within alphabet
             alert("That is not a valid letter!");
         }  
-    } else {
+    } else { // if key press has already been stored in guessMade array
         alert("You've already guessed that letter!")
     }
 }
-
-// console.log("---userKey---")
-// console.log(userKey)
-// console.log("---history---")
-// console.log(history)
-// console.log("---userHistory---")
-// console.log(userHistory)
