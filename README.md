@@ -1,4 +1,5 @@
 # Psychic-Game
+<img src="assets/images/screenshot.PNG" alt="Screenshot of Webpage">
 
 This is an assignment done for UC Berkeley Coding Bootcamp. The goal for this assignment was to create a game in Javascript where the user has to guess what letter the computer has picked at random. This was an activity to explore and utilize interactivity with the Javascript language.
 
@@ -11,5 +12,3 @@ I utilized conditional statements to create the rules and looping functionality 
 * Javascript
 
 ---
-
-<img src="https://via.placeholder.com/400x300" alt="Screenshot of Webpage">
